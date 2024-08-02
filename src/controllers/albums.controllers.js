@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 const catchError = require('../utils/catchError');
-const Album = require('../models/Album.model');
-const Artist = require('../models/Artist.model');
+const Album = require('../models/Album');
 
 const getAll = catchError(async(req, res) => {
-    const results = await Album.findAll({include: Artist});
+    const results = await Album.findAll();
     return res.json(results);
 });
 
@@ -15,7 +13,7 @@ const create = catchError(async(req, res) => {
 
 const getOne = catchError(async(req, res) => {
     const { id } = req.params;
-    const result = await Album.findByPk(id, {include: Artist});
+    const result = await Album.findByPk(id);
     if(!result) return res.sendStatus(404);
     return res.json(result);
 });
@@ -44,5 +42,3 @@ module.exports = {
     remove,
     update
 }
-=======
->>>>>>> ea4e883c8323e290642c3c5ea7e5dce945504cc2
