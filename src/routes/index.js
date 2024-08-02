@@ -1,8 +1,8 @@
 const express = require('express');
-const routerArtists = require('./artis.outer');
+const routerArtists = require('./artists.router');
 const routerAlbum = require('./albums.router');
 const routerSong = require('./songs.router');
-const routerGenre = require('./genre.router');
+const routerGenre = require('./genres.router');
 const router = express.Router();
 
 router.use('/artists', routerArtists)
