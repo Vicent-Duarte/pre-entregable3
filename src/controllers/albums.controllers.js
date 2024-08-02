@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const catchError = require('../utils/catchError');
 const Album = require('../models/Album.model');
 const Artist = require('../models/Artist.model');
@@ -43,3 +44,5 @@ module.exports = {
     remove,
     update
 }
+=======
+>>>>>>> ea4e883c8323e290642c3c5ea7e5dce945504cc2
