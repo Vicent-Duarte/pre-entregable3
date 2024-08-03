@@ -1,15 +1,18 @@
-const { getAll, create, getOne, remove, update } = require('../controllers/albums.controllers');
+const { getAll, create, getOne, remove, update, setArtist } = require('../controllers/albums.controllers');
 const express = require('express');
 
-const routerAlbum = express.Router();
+const routerAlbums = express.Router();
 
-routerAlbum.route('/')
+routerAlbums.route('/')
     .get(getAll)
     .post(create);
 
-routerAlbum.route('/:id')
+routerAlbums.route('/:id/artist')
+    .post(setArtist)
+
+routerAlbums.route('/:id')
     .get(getOne)
     .delete(remove)
     .put(update);
 
-module.exports = routerAlbum;
+module.exports = routerAlbums;
