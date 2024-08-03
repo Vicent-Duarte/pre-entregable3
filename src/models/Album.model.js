@@ -14,7 +14,10 @@ const Album = sequelize.define('album', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    
+    artistId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
 });
 
 module.exports = Album;
